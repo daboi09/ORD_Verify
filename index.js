@@ -42,7 +42,6 @@ app.post('/upload', upload.single('image'), (req, res) => {
             if (text.includes(criminal.criminal_name)) {
               console.log("criminal found");
               const msg = "Your name is found in the criminal database";
-              sendEmail();
               res.render('programs/verification_not_ok', { msg });
               criminalFound = true;
             }
@@ -60,7 +59,6 @@ app.post('/upload', upload.single('image'), (req, res) => {
           
                 if (isIdentificationSuspected) {
                   const msg = "Your identification is suspected to be stolen or wanted";
-                  sendEmailid();
                   return res.render('programs/verification_not_ok', { msg });
                 } else {
                   res.redirect('/verify_yes');
