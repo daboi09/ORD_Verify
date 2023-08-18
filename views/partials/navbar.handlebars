@@ -1,0 +1,71 @@
+<!-- navbar.handlebars -->
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #000;
+  color: #fff;
+}
+
+.containernav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #f2f2f2;
+}
+
+.cart a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cart i {
+  margin-right: 5px;
+}
+
+</style>
+<nav>
+  <div class="containernav">
+      <a href="#" class="logo"><img src="https://pbs.twimg.com/profile_images/1293555338072002560/XbmfZ-pv_400x400.jpg" style="height:50px;"></a>
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/showadmin">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="cart">
+        <a href="#"><img src="https://www.freeiconspng.com/uploads/black-shopping-cart-icon-22.png" style="height:50px;"></a>
+      </div>
+    </div>
+</nav>

@@ -1,0 +1,28 @@
+{
+  "name": "ocd-and-face-verification",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jia heng",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "express-mysql-session": "^3.0.0",
+    "express-router": "^0.0.1",
+    "install": "^0.13.0",
+    "moment": "^2.29.4",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.4.0",
+    "node-tesseract-ocr": "^2.2.1",
+    "router": "^1.3.8",
+    "sequelize": "^6.32.1",
+    "sharp": "^0.32.1",
+    "tesseract.js": "^4.1.0",
+    "transporter": "^0.0.1"
+  }
+}

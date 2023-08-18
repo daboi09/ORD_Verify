@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+h1 {
+  color: #333;
+}
+
+.upload-section {
+  border: 2px dashed #aaaaaa;
+  padding: 20px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.upload-placeholder {
+  text-align: center;
+  color: #666666;
+  padding: 20px;
+}
+
+.upload-placeholder svg {
+  width: 80px;
+  height: 80px;
+}
+
+.upload-placeholder p {
+  margin: 10px 0;
+}
+
+.file-upload-btn {
+  display: inline-block;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-upload-btn:hover {
+  background-color: #45a049;
+}
+
+.image-preview {
+  margin-top: 20px;
+}
+
+.submit-btn {
+  display: inline-block;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+.hidden {
+       display: none;
+     }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>First, upload your ID image</h1>
+      <div class="upload-placeholder">
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="file-upload" class="file-upload-btn">Browse</label>        
+        <input type="file" id="file-upload" accept="image/*" onchange="displayImage(this)" name="image" class="hidden">
+      </div>
+    <div class="image-preview" id="image-preview"></div>
+    <button class="submit-btn">Submit</button>
+    </form>
+  </div>
+  <script>
+    function displayImage(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      document.getElementById("image-preview").innerHTML = '<img src="' + e.target.result + '" alt="Image Preview" />';
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+  </script>
+</body>
+</html>
